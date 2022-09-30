@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Open+Sans:wght@300&family=Poppins:wght@400;500;600;700;800&family=Roboto&family=Rubik:ital,wght@0,300;0,400;1,500&family=Rufina:wght@400;700&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="css/external/all.min.css">
+    
+   
+    <link rel="stylesheet" href="css/style.css">
+    <title>presentation</title>
+</head>
+<body>
+<!-- page one intro -->
+<section id="page-1" class="page">
+  <h1>welcome to  my presentation </h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, cupiditate? Porro, fugiat praesentium. Alias voluptatum facilis culpa fugit nihil possimus voluptatem, dolore dolores veritatis esse magnam consequuntur ab vitae impedit debitis sapiente numquam temporibus iure. Culpa eligendi vero ullam inventore.</p>
+<div >
+  <a href="#page-2" class="btn ">next page <i class="fa-solid fa-circle-chevron-down"></i></a>
+</div>
+</section>
+
+<!-- page two  -->
+<section id="page-2" class="page">
+  <h1>page -2 </h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, cupiditate? Porro, fugiat praesentium. Alias voluptatum facilis culpa fugit nihil possimus voluptatem, dolore dolores veritatis esse magnam consequuntur ab vitae impedit debitis sapiente numquam temporibus iure. Culpa eligendi vero ullam inventore.</p>
+<div >
+  <a href="#page-1" class="btn btn-dark">prev page <i class="fa-solid fa-circle-chevron-up"></i></a>
+  <a href="#page-3" class="btn ">next page <i class="fa-solid fa-circle-chevron-down"></i></a>
+</div>
+</section>
+
+<!-- page three -->
+<section id="page-3" class="page">
+  <h1>page-3 </h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, cupiditate? Porro, fugiat praesentium. Alias voluptatum facilis culpa fugit nihil possimus voluptatem, dolore dolores veritatis esse magnam consequuntur ab vitae impedit debitis sapiente numquam temporibus iure. Culpa eligendi vero ullam inventore.</p>
+<div >
+  <a href="#page-2" class="btn btn-dark">prev page <i class="fa-solid fa-circle-chevron-up"></i></a>
+  <a href="#page-4" class="btn ">next page <i class="fa-solid fa-circle-chevron-down"></i></a>
+</div>
+</section>
+<!-- page 4 -->
+<section id="page-4" class="page">
+  <h1>page-3 </h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, cupiditate? Porro, fugiat praesentium. Alias voluptatum facilis culpa fugit nihil possimus voluptatem, dolore dolores veritatis esse magnam consequuntur ab vitae impedit debitis sapiente numquam temporibus iure. Culpa eligendi vero ullam inventore.</p>
+<div >
+  <a href="#page-3" class="btn btn-dark">prev page <i class="fa-solid fa-circle-chevron-up"></i></a>
+  
+</div>
+</section>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      
+  <script>
+    //smooth scrollong
+    $('.btn').on('click',function(event){
+      if(this.hash !==''){
+        event.preventDefault();
+        const hash = this.hash;
+        $('html,body').animate({
+          scrollTop:$(hash).offset().top
+        },
+        800
+        );
+      }
+    });
+  </script>
+</body>
+</html>
